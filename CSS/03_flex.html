@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        
+        .container {
+            background-color: #696969;
+            height: 700px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+
+        /* squezing not allowed  */
+            /* flex-wrap: wrap; */
+
+        /* shorthand notation  */
+            /* flex-flow: column wrap; */
+
+        /* ByDefault: main axis */
+            /* justify-content: center; */
+
+        /* ByDefault: cross axis  */
+            /* align-items: center;  */
+            /* align-content: center; */
+
+
+        }
+
+        .box {
+            width: 150px;
+            height: 100px;
+            border: 2px solid #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #box1 {
+            background-color: #1500ff;
+        /* Speed of shrinking  */
+            flex-shrink: 4;
+            align-self: center;
+        }
+
+        #box2 {
+            background-color: #ef03c4;
+        /* takes all space available */
+            /* flex-grow: 4; */
+
+        /* Short-hand notation */
+            /* flex: flex-grow | flex-shrink | flex-basis; */
+
+            align-self: flex-end;
+        }
+
+        #box3 {
+            background-color: #ddff00;
+
+        /* initial width  */
+            /* flex-basis: 300px; */
+        }
+
+        #box4 {
+            background-color: #ff0800;
+            order: -1;
+        }
+
+        a {
+            width: 150px;
+            height: 100px;
+            background-color: #54f654;
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: larger;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box" id="box1">Box1</div>
+        <div class="box" id="box2">Box2</div>
+        <div class="box" id="box3">Box3</div>
+        <div class="box" id="box4">Box4</div>
+    </div>
+
+    <a href="https://labs.codehelp.in/fruitbox-flex">FlexBox Game</a>
+
+</body>
+</html>
